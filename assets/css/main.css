@@ -2018,7 +2018,7 @@ input, select, textarea {
 		text-decoration: none;
 		font-size: xx-large;
 		padding: 0.3em 2em 0.3em 2em;
-		background-color: #be8e90;
+		background-color: #009CA6;
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
@@ -2260,7 +2260,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a.active span:before {
-						color: #e27689;
+						color: #009CA6;
 					}
 
 /* Footer */
@@ -2722,3 +2722,37 @@ input, select, textarea {
 				}
 
 	}
+.professional-summary {
+  background-color: #1E2A38;
+  color: white;
+  padding: 40px 0;
+  line-height: 1.6;
+}
+.professional-summary h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.professional-summary h3 {
+  font-style: italic;
+  color: #9bb8d3;
+  margin-top: 10px;
+}
+
+.professional-summary footer {
+  margin-top: 40px;
+  border-top: 1px solid #2f3b4c;
+  padding-top: 20px;
+  color: #d0d7df;
+}
+
+.professional-summary footer ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.professional-summary p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
