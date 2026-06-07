@@ -1,0 +1,473 @@
+/* ============================================
+   Sketchy / Hand-Drawn Theme for Portfolio
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --paper-bg: #f8f4eb;
+  --paper-dark: #f2ede4;
+  --paper-darker: #ebe5d8;
+  --kraft: #d4c5a9;
+  --kraft-dark: #b8a88c;
+  --ink: #2c2c2c;
+  --ink-light: #4a4a4a;
+  --heading-color: #3d3229;
+  --rust: #c45d3e;
+  --rust-light: #d4764e;
+  --teal-muted: #5a8a7a;
+  --card-bg: #faf6ee;
+  --card-border: #3d3229;
+  --sidebar-bg: #d4c5a9;
+  --sidebar-text: #2c2c2c;
+  --border-sketchy: 2px solid #3d3229;
+  --font-hand: 'Schoolbell', cursive;
+  --font-hand-alt: 'Caveat', cursive;
+}
+
+/* --- Font Override --- */
+body,
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, strong, em, i, b,
+input, select, textarea, label,
+blockquote, pre, code,
+td, th, caption {
+  font-family: var(--font-hand) !important;
+}
+
+/* Slightly different weight for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-hand) !important;
+  color: var(--heading-color) !important;
+  letter-spacing: 0.5px;
+}
+
+h1 { font-size: 2.4em !important; }
+h2 { font-size: 2em !important; }
+h3 { font-size: 1.5em !important; }
+
+/* --- Body & Page Background --- */
+body {
+  background-color: var(--paper-bg) !important;
+  color: var(--ink) !important;
+  line-height: 1.6 !important;
+  position: relative;
+}
+
+/* Subtle paper texture via SVG filter */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Links --- */
+a {
+  color: var(--rust) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--rust-light) !important;
+  text-decoration: underline !important;
+}
+
+/* --- Sketchy Border Mixins (via classes) --- */
+.sketchy-border {
+  border: 2.5px solid var(--card-border) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  position: relative;
+}
+
+.sketchy-border-light {
+  border: 2px solid var(--kraft-dark) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+}
+
+.sketchy-border-subtle {
+  border: 1.5px solid var(--ink-light) !important;
+  border-radius: 30px 4px 30px 4px / 4px 30px 4px 30px !important;
+}
+
+/* --- Sidebar / Header --- */
+#header {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+}
+
+#header .top #logo h1,
+#header .top #logo p {
+  color: var(--sidebar-text) !important;
+}
+
+#header nav ul li a {
+  color: var(--sidebar-text) !important;
+}
+
+#header nav ul li a:hover,
+#header nav ul li.active a {
+  color: var(--rust) !important;
+}
+
+#header .bottom .icons li a {
+  color: var(--sidebar-text) !important;
+}
+
+#header .bottom .icons li a:hover {
+  color: var(--rust) !important;
+}
+
+/* --- Experience Cards --- */
+.expCard {
+  background: var(--card-bg) !important;
+  border: 2.5px solid var(--card-border) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  color: var(--ink) !important;
+  padding: 25px 30px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 4px 4px 0px var(--kraft-dark) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--kraft-dark) !important;
+}
+
+.expCard h1,
+.expCard h2,
+.expCard h3,
+.expCard h4,
+.expCard h5,
+.expCard h6 {
+  color: var(--heading-color) !important;
+}
+
+.expCard p {
+  color: var(--ink-light) !important;
+}
+
+.expCard img {
+  border-radius: 50% !important;
+  border: 2px solid var(--kraft-dark) !important;
+}
+
+/* --- Project Cards (.item) --- */
+.item {
+  background: var(--card-bg) !important;
+  border: 2.5px solid var(--card-border) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 3px 3px 0px var(--kraft-dark) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--kraft-dark) !important;
+}
+
+.item h3 {
+  color: var(--heading-color) !important;
+}
+
+.item .image img {
+  border: 2px solid var(--kraft-dark) !important;
+  border-radius: 4px !important;
+}
+
+/* --- Buttons --- */
+.button,
+.buttonProjects,
+.buttonMoreProjects,
+.buttonRequestMyServices {
+  font-family: var(--font-hand) !important;
+  display: inline-block;
+  padding: 12px 28px !important;
+  border: 2.5px solid var(--card-border) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  background: var(--card-bg) !important;
+  color: var(--ink) !important;
+  font-size: 1.1em !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0px var(--kraft-dark);
+}
+
+.button:hover,
+.buttonProjects:hover,
+.buttonMoreProjects:hover,
+.buttonRequestMyServices:hover {
+  background: var(--ink) !important;
+  color: var(--paper-bg) !important;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--kraft-dark);
+  text-decoration: none !important;
+}
+
+/* Primary button */
+.button.primary,
+.button-group .button.primary {
+  background: var(--rust) !important;
+  color: var(--paper-bg) !important;
+  border-color: var(--heading-color) !important;
+}
+
+.button.primary:hover {
+  background: var(--heading-color) !important;
+  color: var(--paper-bg) !important;
+}
+
+/* Tertiary button */
+.button.tertiary {
+  background: transparent !important;
+  border-color: var(--rust) !important;
+  color: var(--rust) !important;
+}
+
+.button.tertiary:hover {
+  background: var(--rust) !important;
+  color: var(--paper-bg) !important;
+}
+
+/* More Projects button */
+.buttonMoreProjects {
+  font-size: 1.3em !important;
+  padding: 14px 36px !important;
+  background: var(--card-bg) !important;
+  border: 2.5px solid var(--card-border) !important;
+}
+
+/* --- Sections --- */
+section {
+  background-color: transparent !important;
+}
+
+section.two {
+  background-color: var(--paper-dark) !important;
+}
+
+section.three {
+  background-color: var(--paper-darker) !important;
+}
+
+section.professional-summary {
+  background-color: var(--kraft) !important;
+  color: var(--ink) !important;
+}
+
+section.professional-summary h2,
+section.professional-summary h3 {
+  color: var(--heading-color) !important;
+}
+
+section.professional-summary p {
+  color: var(--ink-light) !important;
+}
+
+section.professional-summary strong {
+  color: var(--heading-color) !important;
+}
+
+/* --- Professional Summary Hero --- */
+.professional-summary .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.professional-summary header h2 {
+  font-size: 1.8em !important;
+  line-height: 1.4;
+}
+
+.professional-summary header h3 {
+  font-size: 1.3em !important;
+}
+
+.professional-summary header h3 i {
+  color: var(--rust) !important;
+}
+
+.professional-summary p {
+  font-size: 1.1em !important;
+  line-height: 1.7;
+}
+
+.professional-summary footer ul {
+  list-style: disc !important;
+  padding-left: 25px !important;
+}
+
+.professional-summary footer ul li {
+  list-style: disc !important;
+  margin-bottom: 8px;
+}
+
+/* --- Publications --- */
+#publications ul {
+  list-style: disc !important;
+  padding-left: 25px !important;
+}
+
+#publications li {
+  list-style: disc !important;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+#publications a {
+  color: var(--rust) !important;
+  border-bottom: 1.5px dashed var(--rust) !important;
+}
+
+#publications a:hover {
+  border-bottom-color: var(--heading-color) !important;
+}
+
+/* --- Certifications --- */
+#certifications ul {
+  list-style: disc !important;
+  padding-left: 25px !important;
+}
+
+#certifications li {
+  list-style: disc !important;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* --- Footer --- */
+#footer {
+  background-color: var(--kraft) !important;
+  color: var(--sidebar-text) !important;
+}
+
+#footer .copyright li {
+  color: var(--sidebar-text) !important;
+}
+
+#footer .copyright a {
+  color: var(--rust) !important;
+}
+
+/* --- Scrollbar (sketchy feel) --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kraft-dark);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  border: 1.5px solid var(--paper-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-light);
+}
+
+/* --- Selection --- */
+::selection {
+  background: var(--rust);
+  color: var(--paper-bg);
+}
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 736px) {
+  #header {
+    background-color: var(--kraft) !important;
+  }
+
+  .expCard {
+    padding: 18px 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .item {
+    padding: 15px !important;
+  }
+
+  h1 { font-size: 1.8em !important; }
+  h2 { font-size: 1.5em !important; }
+  h3 { font-size: 1.2em !important; }
+}
+
+/* --- Navigation active state --- */
+#nav ul li.active a {
+  color: var(--rust) !important;
+  font-weight: bold;
+}
+
+/* --- Horizontal rules --- */
+hr {
+  border: none !important;
+  border-top: 2px dashed var(--kraft-dark) !important;
+  margin: 20px 0;
+}
+
+/* --- Code / pre elements --- */
+code, pre {
+  font-family: 'Courier New', monospace !important;
+  background: var(--paper-dark) !important;
+  border: 1.5px solid var(--kraft-dark) !important;
+  border-radius: 4px !important;
+  padding: 2px 6px;
+}
+
+pre {
+  padding: 12px !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+}
+
+/* --- Table sketchy style --- */
+table {
+  border: 2px solid var(--card-border) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  overflow: hidden;
+}
+
+th {
+  background: var(--kraft) !important;
+  color: var(--heading-color) !important;
+  border-bottom: 2px solid var(--card-border) !important;
+}
+
+td {
+  border-bottom: 1px dashed var(--kraft-dark) !important;
+}
+
+/* --- Utility: Paper card --- */
+.paper-card {
+  background: var(--card-bg) !important;
+  border: 2.5px solid var(--card-border) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  padding: 20px;
+  box-shadow: 3px 3px 0px var(--kraft-dark);
+}
+
+/* --- Utility: Sketchy underline --- */
+.sketchy-underline {
+  text-decoration: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 25 0, 50 6 T 100 6' stroke='%23c45d3e' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100px 8px;
+  padding-bottom: 4px;
+}

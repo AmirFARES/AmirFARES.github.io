@@ -74,22 +74,20 @@ input, select, textarea {
 
 /* Basic */
 .expCard {
-    /* Set a background gradient */
-    background: linear-gradient(45deg, #3a3a3a, #c07300);
-    
-    /* Add rounded corners */
-    border-radius: 10px;
-
-    /* Add some padding and margin for spacing */
-    padding: 20px;
+    background: #faf6ee;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    border: 2.5px solid #3d3229;
+    padding: 25px 30px;
     margin: 10px;
-
-    /* Add a shadow for depth (optional) */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    
-    /* Add other styles specific to your card as needed */
-    color: white; /* Text color on the card */
-    font-size: 16px; /* Font size for the card content */
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px #b8a88c;
+    color: #2c2c2c;
+    font-size: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.expCard:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #b8a88c;
 }
 .expCard h1,
 .expCard h2,
@@ -97,7 +95,8 @@ input, select, textarea {
 .expCard h4,
 .expCard h5,
 .expCard h6 {
-    color: white; /* Set header text color to white */
+    color: #3d3229;
+}
 }
 
 	html {
@@ -109,12 +108,12 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
-		font-family: 'Source Sans Pro', sans-serif;
+		background: #f8f4eb;
+		font-family: 'Schoolbell', cursive;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #2c2c2c;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -129,16 +128,17 @@ input, select, textarea {
 		}
 
 	input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Schoolbell', cursive;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #2c2c2c;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Schoolbell', cursive;
 		font-weight: 300;
-		color: #666;
+		color: #3d3229;
 		line-height: 1.5em;
 	}
 
@@ -182,7 +182,7 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 300;
-		color: #666;
+		color: #3d3229;
 	}
 
 	em, i {
@@ -191,7 +191,7 @@ input, select, textarea {
 
 	a {
 		text-decoration: none;
-		color: inherit;
+		color: #c45d3e;
 		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
 		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
@@ -201,7 +201,7 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #E27689;
+			color: #d4764e;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
@@ -219,11 +219,11 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: dashed 2px #b8a88c;
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
+		border-left: solid 0.5em #b8a88c;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -1992,62 +1992,68 @@ input, select, textarea {
 		margin-bottom: 0.4em;
 		position: relative;
 		display: inline-block;
-		border-radius: 0.35em;
-		color: #fff !important;
+		border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+		color: #2c2c2c !important;
 		text-decoration: none;
-		padding: 0 0.4em 0 0.4em;
-		background-color: #8ebebc;
-		border: 0;
+		padding: 8px 16px;
+		background-color: #faf6ee;
+		border: 2.5px solid #3d3229;
 		cursor: pointer;
-		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		-moz-transition: background-color 0.35s ease-in-out;
-		-webkit-transition: background-color 0.35s ease-in-out;
-		-ms-transition: background-color 0.35s ease-in-out;
-		transition: background-color 0.35s ease-in-out;
+		box-shadow: 3px 3px 0px #b8a88c;
+		-moz-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		-webkit-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		-ms-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+	}
+	.buttonProjects:hover {
+		background-color: #3d3229;
+		color: #faf6ee !important;
+		transform: translate(-1px, -1px);
+		box-shadow: 4px 4px 0px #b8a88c;
 	}
 
 	.buttonMoreProjects {
 		margin-bottom: 0.4em;
 		position: relative;
 		display: inline-block;
-		border-radius: 0.45em;
-		color: #fff !important;
+		border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+		color: #2c2c2c !important;
 		text-decoration: none;
 		font-size: xx-large;
 		padding: 0.3em 2em 0.3em 2em;
-		background-color: #009CA6;
-		border: 0;
+		background-color: #faf6ee;
+		border: 2.5px solid #3d3229;
 		cursor: pointer;
-		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		-moz-transition: background-color 0.35s ease-in-out;
-		-webkit-transition: background-color 0.35s ease-in-out;
-		-ms-transition: background-color 0.35s ease-in-out;
-		transition: background-color 0.35s ease-in-out;
+		box-shadow: 4px 4px 0px #b8a88c;
+		-moz-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		-webkit-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		-ms-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+	}
+	.buttonMoreProjects:hover {
+		background-color: #3d3229;
+		color: #faf6ee !important;
+		transform: translate(-2px, -2px);
+		box-shadow: 6px 6px 0px #b8a88c;
 	}
 	.buttonRequestMyServices {
 		margin-bottom: 0.4em;
 		position: relative;
 		display: inline-block;
-		border-radius: 0.45em;
-		color: #fff !important;
+		border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+		color: #2c2c2c !important;
 		text-decoration: none;
 		font-size: xx-large;
 		padding: 0.3em 0.5em 0.3em 0.5em;
-		background-color: #006D76;
-		border: 0;
+		background-color: transparent;
+		border: 2.5px solid #c45d3e;
 		cursor: pointer;
-		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		-moz-transition: background-color 0.35s ease-in-out;
-		-webkit-transition: background-color 0.35s ease-in-out;
+		color: #c45d3e !important;
+		-moz-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		-webkit-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		-ms-transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+		transition: background-color 0.35s ease-in-out, transform 0.2s ease;
+	}
 		-ms-transition: background-color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out;
 	}
@@ -2071,9 +2077,17 @@ input, select, textarea {
 /* Item */
 
 	.item {
-		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
+		box-shadow: 3px 3px 0px #b8a88c;
 		margin-bottom: 40px;
-		background: linear-gradient(45deg, #ebebeb, #ffffff, #e7e7e7);
+		background: #faf6ee;
+		border: 2.5px solid #3d3229;
+		border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+		padding: 20px;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	.item:hover {
+		transform: translate(-2px, -2px);
+		box-shadow: 5px 5px 0px #b8a88c;
 	}
 
 		.item header {
@@ -2137,9 +2151,9 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #222629 url("images/overlay.png");
+		background: #d4c5a9;
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-		color: #fff;
+		color: #2c2c2c;
 		height: 100%;
 		left: 0;
 		overflow-y: auto;
@@ -2174,7 +2188,7 @@ input, select, textarea {
 		}
 
 			#header .icons a {
-				color: #41484c;
+				color: #4a4a4a;
 				-moz-transition: color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out;
 				-ms-transition: color 0.35s ease-in-out;
@@ -2182,7 +2196,7 @@ input, select, textarea {
 			}
 
 				#header .icons a:hover {
-					color: #fff;
+					color: #c45d3e;
 				}
 
 	#logo {
@@ -2194,7 +2208,7 @@ input, select, textarea {
 
 		#logo h1 {
 			position: relative;
-			color: #fff;
+			color: #3d3229;
 			font-weight: 600;
 			font-size: 1em;
 			line-height: 1em;
@@ -2204,7 +2218,7 @@ input, select, textarea {
 			position: relative;
 			display: block;
 			font-size: 0.6em;
-			color: rgba(255, 255, 255, 0.5);
+			color: #4a4a4a;
 			line-height: 1.25em;
 			margin: 0.5em 0 0 0;
 		}
@@ -2228,7 +2242,7 @@ input, select, textarea {
 			#nav ul li a {
 				display: block;
 				padding: 0.5em 1.5em 0.5em 1.5em;
-				color: rgba(255, 255, 255, 0.5);
+				color: #4a4a4a;
 				text-decoration: none;
 				outline: 0;
 				border: 0;
@@ -2247,20 +2261,20 @@ input, select, textarea {
 					#nav ul li a span:before {
 						position: absolute;
 						left: 0;
-						color: #41484c;
+						color: #4a4a4a;
 						text-align: center;
 						width: 1.25em;
 						line-height: 1.75em;
 					}
 
 				#nav ul li a.active {
-					background: rgba(0, 0, 0, 0.15);
-					box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
-					color: #fff;
+					background: rgba(0, 0, 0, 0.08);
+					box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.05);
+					color: #c45d3e;
 				}
 
 					#nav ul li a.active span:before {
-						color: #009CA6;
+						color: #c45d3e;
 					}
 
 /* Footer */
@@ -2268,7 +2282,7 @@ input, select, textarea {
 	#footer {
 		margin-left: 375px;
 		text-align: center;
-		background-color: #dce3e2;
+		background-color: #d4c5a9;
 		padding: 3em 0 4em 0;
 		box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
 		font-size: 0.8em;
@@ -2338,20 +2352,20 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #81918E;
+				background-color: #d4c5a9;
 				background-image: url("../../images/banner.jpg");
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+				background-color: #f2ede4;
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: #ebe5d8;
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: #e5dfd2;
 			}
 
 /* Wide */
@@ -2723,28 +2737,28 @@ input, select, textarea {
 
 	}
 .professional-summary {
-  background-color: #1E2A38;
-  color: white;
+  background-color: #d4c5a9;
+  color: #2c2c2c;
   padding: 40px 0;
   line-height: 1.6;
 }
 .professional-summary h2 {
   font-size: 2.5em;
-  color: #ffffff;
+  color: #3d3229;
   font-weight: 300;
 }
 
 .professional-summary h3 {
   font-style: italic;
-  color: #9bb8d3;
+  color: #c45d3e;
   margin-top: 10px;
 }
 
 .professional-summary footer {
   margin-top: 40px;
-  border-top: 1px solid #2f3b4c;
+  border-top: 2px dashed #b8a88c;
   padding-top: 20px;
-  color: #d0d7df;
+  color: #4a4a4a;
 }
 
 .professional-summary footer ul {
@@ -2768,50 +2782,48 @@ input, select, textarea {
 .button {
   padding: 12px 24px;
   font-size: 18px;
-  font-weight: bold;         /* Make the text bolder for better emphasis */
-  border-radius: 12px;
-  border: none;
+  font-family: 'Schoolbell', cursive;
+  font-weight: bold;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  border: 2.5px solid #3d3229;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Add subtle scale effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #faf6ee;
+  color: #2c2c2c;
 }
 
 .button.primary {
-  background-color: #009CA6;
-  color: white !important;
+  background-color: #c45d3e;
+  color: #f8f4eb !important;
 }
 
 .button.secondary {
-  background-color: #f5f5f5;
-  color: #333333 !important;
-  border: 2px solid #dcdcdc; /* Add a subtle border to define edges */
+  background-color: #f2ede4;
+  color: #3d3229 !important;
+  border: 2px solid #b8a88c;
 }
 
 .button.tertiary {
   background-color: transparent;
-  color: #009CA6 !important;
-  border: 2px solid #009CA6;
+  color: #c45d3e !important;
+  border: 2px solid #c45d3e;
 }
 
 .button.primary:hover {
-  background-color: #007e8b;
-  transform: translateY(-2px);  /* Lift effect on hover */
+  background-color: #3d3229;
+  transform: translateY(-2px);
 }
 
 .button.secondary:hover {
-  background-color: #e0e0e0;
-  transform: translateY(-2px);  /* Lift effect on hover */
+  background-color: #d4c5a9;
+  transform: translateY(-2px);
 }
 
 .button.tertiary:hover {
-  background-color: #009CA6;
-  color: white !important;
-  transform: translateY(-2px);  /* Lift effect on hover */
-}
-
-.button-group {
-  display: flex;
-  gap: 20px;  /* Add spacing between buttons */
+  background-color: #c45d3e;
+  color: #f8f4eb !important;
+  transform: translateY(-2px);
 }
 
