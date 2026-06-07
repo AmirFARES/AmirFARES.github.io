@@ -327,14 +327,40 @@ section.professional-summary strong {
   margin-bottom: 8px;
 }
 
-/* --- Publications --- */
-#publications ul {
+/* --- Override PaperCSS dash list markers globally --- */
+ul {
   list-style: disc !important;
   padding-left: 25px !important;
 }
 
+ul li::before {
+  content: none !important;
+  display: none !important;
+}
+
+li::marker {
+  color: var(--heading-color) !important;
+}
+
+/* --- Education list --- */
+.professional-summary ul {
+  list-style-type: disc !important;
+  padding-left: 25px !important;
+}
+
+.professional-summary li {
+  list-style-type: disc !important;
+  margin-bottom: 8px;
+}
+
+/* --- Publications --- */
+#publications ul {
+  list-style-type: disc !important;
+  padding-left: 25px !important;
+}
+
 #publications li {
-  list-style: disc !important;
+  list-style-type: disc !important;
   margin-bottom: 12px;
   line-height: 1.6;
 }
@@ -350,12 +376,12 @@ section.professional-summary strong {
 
 /* --- Certifications --- */
 #certifications ul {
-  list-style: disc !important;
+  list-style-type: disc !important;
   padding-left: 25px !important;
 }
 
 #certifications li {
-  list-style: disc !important;
+  list-style-type: disc !important;
   margin-bottom: 10px;
   line-height: 1.5;
 }
