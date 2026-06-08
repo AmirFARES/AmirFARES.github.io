@@ -358,6 +358,16 @@ section.professional-summary strong {
   margin-bottom: 8px;
 }
 
+.professional-summary footer {
+  color: #2c2c2c !important;
+}
+
+.professional-summary footer p,
+.professional-summary footer ul,
+.professional-summary footer ul li {
+  color: #2c2c2c !important;
+}
+
 /* --- Override PaperCSS dash list markers globally --- */
 ul {
   list-style: disc !important;
@@ -458,8 +468,8 @@ li::marker {
 
 /* --- Selection --- */
 ::selection {
-  background: var(--rust);
-  color: var(--paper-bg);
+  background: #c45d3e !important;
+  color: #fff !important;
 }
 
 /* --- Responsive Adjustments --- */
@@ -527,6 +537,7 @@ nav a,
   border-left: none !important;
   border-right: none !important;
   border-top: none !important;
+  outline: none !important;
 }
 
 /* Remove separator line above social icons */
@@ -565,9 +576,19 @@ nav a,
 }
 
 /* Theme-colored text selection */
-::selection {
+*::selection {
   background: #c45d3e !important;
   color: #fff !important;
+}
+
+*::-moz-selection {
+  background: #c45d3e !important;
+  color: #fff !important;
+}
+
+/* Remove focus outlines */
+*:focus {
+  outline: none !important;
 }
 
 /* --- Horizontal rules --- */
