@@ -559,6 +559,11 @@ nav a,
   background: transparent !important;
 }
 
+/* Remove blue tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 /* --- Horizontal rules --- */
 hr {
   border: none !important;
