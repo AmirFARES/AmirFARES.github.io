@@ -155,8 +155,20 @@ a:hover {
   color: var(--heading-color) !important;
 }
 
+/* Company name styling - first h3 in each card */
+.expCard header h3:first-of-type {
+  font-size: 1.4em !important;
+  font-weight: 700 !important;
+  margin-bottom: 2px;
+}
+
 .expCard p {
   color: var(--ink-light) !important;
+}
+
+.expCard strong {
+  font-weight: 700 !important;
+  color: var(--heading-color) !important;
 }
 
 .expCard img {
