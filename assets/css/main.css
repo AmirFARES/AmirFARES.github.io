@@ -192,17 +192,16 @@ input, select, textarea {
 	a {
 		text-decoration: none;
 		color: #c45d3e;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
-		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		border-bottom: none;
+		-moz-transition: color 0.35s ease-in-out;
+		-webkit-transition: color 0.35s ease-in-out;
+		-ms-transition: color 0.35s ease-in-out;
+		transition: color 0.35s ease-in-out;
 		outline: 0;
 	}
 
 		a:hover {
 			color: #d4764e;
-			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
 	sub {

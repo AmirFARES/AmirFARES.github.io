@@ -73,15 +73,34 @@ body > * {
 }
 
 /* --- Links --- */
+a,
+a *,
+*:where(a) {
+  border-bottom: none !important;
+  text-decoration-color: transparent !important;
+  background-image: none !important;
+}
+
 a {
   color: var(--rust) !important;
   text-decoration: none !important;
+  background-image: none !important;
   transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--rust-light) !important;
   text-decoration: underline !important;
+  background-image: none !important;
+}
+
+/* PaperCSS link overrides */
+.modal a,
+nav a,
+article a,
+.card a {
+  background-image: none !important;
+  border-bottom: none !important;
 }
 
 /* --- Sketchy Border Mixins (via classes) --- */
@@ -379,7 +398,13 @@ li::marker {
 
 #publications a {
   color: var(--rust) !important;
-  border-bottom: 1.5px dashed var(--rust) !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+#publications a:hover {
+  color: var(--rust-light) !important;
+  text-decoration: underline !important;
 }
 
 #publications a:hover {
@@ -461,6 +486,17 @@ li::marker {
 #nav ul li.active a {
   color: var(--rust) !important;
   font-weight: bold;
+}
+
+/* Override PaperCSS nav link borders */
+nav a,
+#nav a,
+#header a {
+  background-image: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
 }
 
 /* --- Horizontal rules --- */
