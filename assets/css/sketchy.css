@@ -554,6 +554,11 @@ nav a,
   }
 }
 
+/* Remove red background from avatar */
+.image.avatar48 {
+  background: transparent !important;
+}
+
 /* --- Horizontal rules --- */
 hr {
   border: none !important;
