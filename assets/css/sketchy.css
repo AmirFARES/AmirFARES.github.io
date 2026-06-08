@@ -488,6 +488,36 @@ li::marker {
   font-weight: bold;
 }
 
+/* Remove bullet points from navigation */
+#nav ul li {
+  list-style: none !important;
+  border: none !important;
+}
+
+/* Fix nav to fill full width */
+#nav,
+#nav ul,
+#nav ul li {
+  width: calc(100% - 0.25em) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #d4c5a9 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#nav ul li a {
+  text-align: left !important;
+  padding-left: 0.5em !important;
+  padding-right: 0.5em !important;
+  background: #d4c5a9 !important;
+  border: none !important;
+}
+
+#nav ul li a span {
+  padding-left: 2em !important;
+}
+
 /* Override PaperCSS nav link borders */
 nav a,
 #nav a,
@@ -497,6 +527,12 @@ nav a,
   border-left: none !important;
   border-right: none !important;
   border-top: none !important;
+}
+
+/* Remove separator line above social icons */
+#header .bottom {
+  border-top: none !important;
+  box-shadow: none !important;
 }
 
 /* --- Horizontal rules --- */
