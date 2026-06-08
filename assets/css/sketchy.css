@@ -564,6 +564,12 @@ nav a,
   -webkit-tap-highlight-color: transparent !important;
 }
 
+/* Theme-colored text selection */
+::selection {
+  background: #c45d3e !important;
+  color: #fff !important;
+}
+
 /* --- Horizontal rules --- */
 hr {
   border: none !important;
